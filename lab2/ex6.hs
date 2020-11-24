@@ -1,4 +1,15 @@
 
+
+sumSquares :: Num a => [a] -> a
+sumSquares []  = 0 
+sumSquares (x : xs)  = x^2 +  sumSquares xs 
+
+
+
+
+
+
+
 fib :: (Eq a, Num a) => a -> a
 fib n = 
     if n == 0 || n == 1 then n
