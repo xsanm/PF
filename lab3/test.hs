@@ -9,3 +9,6 @@ f = \g -> map g . (\x -> map ($ x) [id, (+1), (+2)])
 
 fun :: String -> Int
 fun = sum . map ((^2) . length) . filter (all isUpper) . filter((== 'K') . head) . words  
+
+g f a = [2^(f a), 3^(f a), 4^(f a)]
+g2 f = (map  ([2..4] )) .  map . (\k ->  ($ k)) . f
